@@ -66,9 +66,9 @@ const Hero = () => (
             <span className="text-[10px] font-black tracking-[0.4em] text-primary uppercase leading-none">Santos & Tavares</span>
           </div>
 
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-[0.9] tracking-tighter text-ink uppercase mb-8">
-            Justiça <br />
-            <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Direito.</span>
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-ink uppercase mb-8">
+            Para nós, cada <br />
+            <span className="text-primary italic font-serif font-normal lowercase tracking-normal">processo é ÚNICO!</span>
           </h1>
 
           <p className="text-lg md:text-xl leading-relaxed text-ink/60 font-medium mb-12 max-w-lg mx-auto lg:mx-0 border-l-0 lg:border-l-4 border-primary lg:pl-8">
@@ -457,13 +457,31 @@ const Contact = () => {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div className="space-y-2">
-                <p className="text-[10px] font-black uppercase tracking-widest text-primary">Localização</p>
-                <p className="text-sm font-bold text-ink leading-tight">Rua João de Castro, 602<br />Segundo Piso, Lages/SC</p>
+              <div className="space-y-4">
+                <p className="text-[10px] font-black uppercase tracking-widest text-primary">Jurídico</p>
+                <div className="space-y-2">
+                  <p className="text-sm font-bold text-ink leading-tight flex flex-col">
+                    <span>Dra. Rafaela Tavares</span>
+                    <span className="text-ink/40 font-medium">(49) 99971-3889</span>
+                  </p>
+                  <p className="text-sm font-bold text-ink leading-tight flex flex-col">
+                    <span>Dr. Rafael Santos</span>
+                    <span className="text-ink/40 font-medium">(49) 99978-4237</span>
+                  </p>
+                </div>
               </div>
-              <div className="space-y-2">
-                <p className="text-[10px] font-black uppercase tracking-widest text-primary">Conecte-se</p>
-                <p className="text-sm font-bold text-ink leading-tight">contato@santostavares.adv.br<br />+55 (49) 99971-3889</p>
+              <div className="space-y-4">
+                <p className="text-[10px] font-black uppercase tracking-widest text-primary">Administrativo</p>
+                <div className="space-y-2">
+                  <p className="text-sm font-bold text-ink leading-tight flex flex-col">
+                    <span>Financeiro</span>
+                    <span className="text-ink/40 font-medium">(49) 99908-3360</span>
+                  </p>
+                  <p className="text-sm font-bold text-ink leading-tight flex flex-col">
+                    <span>Cobranças</span>
+                    <span className="text-ink/40 font-medium">(49) 99825-1787</span>
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -590,17 +608,29 @@ const Footer = () => (
         </div>
 
         <div className="md:col-span-4">
-          <p className="text-[10px] font-black uppercase tracking-[0.4em] text-primary mb-10">Contato Direto</p>
-          <ul className="space-y-8">
-            <li className="flex flex-col gap-2">
-              <span className="text-[8px] font-black uppercase tracking-widest text-white/20">Telefone Especialista</span>
-              <p className="text-xl font-bold tracking-tight">+55 (49) 99971-3889</p>
-            </li>
-            <li className="flex flex-col gap-2">
-              <span className="text-[8px] font-black uppercase tracking-widest text-white/20">E-mail Corporativo</span>
-              <p className="text-xl font-bold tracking-tight">contato@santostavares.adv.br</p>
-            </li>
-          </ul>
+          <p className="text-[10px] font-black uppercase tracking-[0.4em] text-primary mb-10">Contatos Diretos</p>
+          <div className="grid grid-cols-2 gap-8">
+            <ul className="space-y-6">
+              <li className="flex flex-col gap-1">
+                <span className="text-[7px] font-black uppercase tracking-widest text-white/20">Dra. Rafaela</span>
+                <p className="text-sm font-bold tracking-tight">(49) 99971-3889</p>
+              </li>
+              <li className="flex flex-col gap-1">
+                <span className="text-[7px] font-black uppercase tracking-widest text-white/20">Dr. Rafael</span>
+                <p className="text-sm font-bold tracking-tight">(49) 99978-4237</p>
+              </li>
+            </ul>
+            <ul className="space-y-6">
+              <li className="flex flex-col gap-1">
+                <span className="text-[7px] font-black uppercase tracking-widest text-white/20">Financeiro</span>
+                <p className="text-sm font-bold tracking-tight">(49) 99908-3360</p>
+              </li>
+              <li className="flex flex-col gap-1">
+                <span className="text-[7px] font-black uppercase tracking-widest text-white/20">Cobranças</span>
+                <p className="text-sm font-bold tracking-tight">(49) 99825-1787</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
