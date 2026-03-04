@@ -92,7 +92,7 @@ const Hero = () => (
           transition={{ duration: 1, delay: 0.2 }}
           className="relative order-1 lg:order-2"
         >
-          <div className="relative aspect-[4/3] lg:aspect-[4/5] overflow-hidden border-2 border-primary/10 shadow-2xl group">
+          <div className="relative aspect-[4/3] lg:aspect-[4/5] overflow-hidden rounded-2xl border-2 border-primary/10 shadow-2xl group">
             <img
               src="https://imgur.com/HhUuEuo.png"
               alt="Escritório Santos & Tavares"
@@ -121,7 +121,7 @@ const About = () => (
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="lg:w-1/2 relative"
         >
-          <div className="relative z-10 border-2 border-primary/20 aspect-[4/3] overflow-hidden group">
+          <div className="relative z-10 border-2 border-primary/20 aspect-[4/3] overflow-hidden rounded-2xl group">
             <img
               src="https://imgur.com/uXl7RSm.png"
               alt="Escritório Santos & Tavares"
@@ -290,7 +290,7 @@ const Team = () => (
               viewport={{ once: true }}
               className="lg:col-span-5"
             >
-              <div className="relative aspect-[4/5] overflow-hidden border-2 border-primary/20 group">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border-2 border-primary/20 group">
                 <img
                   src="https://imgur.com/vqXwsMv.png"
                   alt="Rafaela Veloso Tavares"
@@ -377,7 +377,7 @@ const Team = () => (
             viewport={{ once: true }}
             className="lg:col-span-5 order-1 lg:order-2"
           >
-            <div className="relative aspect-[4/5] overflow-hidden transition-all duration-700 border-2 border-primary/20">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl transition-all duration-700 border-2 border-primary/20">
               <img
                 src="https://imgur.com/tbbDvgX.png"
                 alt="Rafael dos Santos Silva"
