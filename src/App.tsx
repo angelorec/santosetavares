@@ -67,8 +67,8 @@ const Hero = () => (
           </div>
 
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-ink uppercase mb-8">
-            Para nós, cada <br />
-            <span className="text-primary italic font-serif font-normal lowercase tracking-normal">processo é ÚNICO!</span>
+            Cada processo <br />
+            <span className="text-primary italic font-serif font-normal lowercase tracking-normal">É único.</span>
           </h1>
 
           <p className="text-lg md:text-xl leading-relaxed text-ink/60 font-medium mb-12 max-w-lg mx-auto lg:mx-0 border-l-0 lg:border-l-4 border-primary lg:pl-8">
