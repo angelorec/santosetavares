@@ -12,13 +12,11 @@ const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 bg-bg-light/80 backdrop-blur-xl border-b border-primary/10 h-24">
     <div className="container mx-auto px-6 h-full flex items-center justify-between">
       <div className="flex items-center gap-4 group cursor-pointer">
-        <div className="h-10 w-auto overflow-hidden border border-primary/20 p-1 bg-white">
-          <img
-            src="https://imgur.com/koobVhZ.png"
-            alt="Santos & Tavares Logo"
-            className="h-full w-full object-contain"
-          />
-        </div>
+        <img
+          src="/images/logo-santos-tavares.png"
+          alt="Santos & Tavares Logo"
+          className="h-12 w-auto object-contain"
+        />
         <div className="flex flex-col">
           <h2 className="font-black text-lg tracking-tighter text-ink leading-none uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Tavares.</span></h2>
           <span className="text-[8px] font-black tracking-[0.3em] text-primary uppercase mt-1">Advocacia</span>
@@ -298,7 +296,7 @@ const Team = () => (
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-[10px] font-black tracking-widest text-primary uppercase">Especialista em Gestão Jurídica</p>
+                  <p className="text-[10px] font-black tracking-widest text-primary uppercase">Especialista em Direito do Trabalho</p>
                 </div>
               </div>
             </motion.div>
@@ -311,15 +309,17 @@ const Team = () => (
               <div className="relative">
                 <span className="text-[10px] font-black tracking-[0.3em] text-primary uppercase mb-2 block">Sócia Fundadora</span>
                 <h3 className="text-4xl md:text-5xl font-black text-ink mb-2 uppercase tracking-tighter">Rafaela Veloso <br /><span className="text-primary italic font-serif font-normal lowercase tracking-normal">Tavares.</span></h3>
-                <p className="text-ink/60 font-bold tracking-widest uppercase text-[10px] mt-4">Advogada, OAB/SC 456.789</p>
+                <p className="text-ink/60 font-bold tracking-widest uppercase text-[10px] mt-4">Advogada, OAB/SC 57.063</p>
               </div>
               <p className="text-lg text-ink/70 leading-relaxed font-light border-l-2 border-primary/20 pl-8">
-                Especialista em <span className="font-medium text-ink border-b border-primary/30">Direito do Trabalho, Previdenciário e Sucessões</span>.
+                Especialista em <span className="font-medium text-ink border-b border-primary/30">Direito Trabalhista, Previdenciário, Sucessões e Empresarial</span>.
                 Com uma abordagem consultiva e estratégica, Rafaela lidera a resolução de conflitos complexos no âmbito corporativo e familiar.
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="bg-ink text-white text-[9px] font-black uppercase tracking-widest px-4 py-2">Trabalhista</span>
                 <span className="bg-primary/10 text-ink text-[9px] font-black uppercase tracking-widest px-4 py-2 text-primary">Previdenciário</span>
+                <span className="bg-primary/10 text-ink text-[9px] font-black uppercase tracking-widest px-4 py-2 text-primary">Sucessões</span>
+                <span className="bg-primary/10 text-ink text-[9px] font-black uppercase tracking-widest px-4 py-2 text-primary">Empresarial</span>
               </div>
               <div className="pt-4">
                 <a
@@ -348,15 +348,18 @@ const Team = () => (
             <div className="relative">
               <span className="text-[10px] font-black tracking-[0.3em] text-primary uppercase mb-2 block">Sócio Fundador</span>
               <h3 className="text-4xl md:text-5xl font-black text-ink mb-2 uppercase tracking-tighter">Rafael dos <br /><span className="text-primary italic font-serif font-normal lowercase tracking-normal">Santos Silva.</span></h3>
-              <p className="text-ink/60 font-bold tracking-widest uppercase text-[10px] mt-4">Advogado, OAB/SC 123.456</p>
+              <p className="text-ink/60 font-bold tracking-widest uppercase text-[10px] mt-4">Advogado, OAB/SC 63.425</p>
             </div>
             <p className="text-lg text-ink/70 leading-relaxed font-light border-l-2 border-primary/20 pl-8">
-              Atua com maestria em <span className="font-medium text-ink border-b border-primary/30">Direito Penal, do Consumidor e de Família</span>.
+              Atua com maestria em <span className="font-medium text-ink border-b border-primary/30">Direito Penal, Consumidor, Cível, Família e Imobiliário</span>.
               Sua trajetória é marcada pela defesa intransigente das garantias fundamentais e pela mediação eficaz de disputas cíveis.
             </p>
             <div className="flex flex-wrap gap-3">
-              <span className="bg-ink text-white text-[9px] font-black uppercase tracking-widest px-4 py-2">Direito Penal</span>
+              <span className="bg-ink text-white text-[9px] font-black uppercase tracking-widest px-4 py-2">Penal</span>
               <span className="bg-primary/10 text-ink text-[9px] font-black uppercase tracking-widest px-4 py-2 text-primary">Consumidor</span>
+              <span className="bg-primary/10 text-ink text-[9px] font-black uppercase tracking-widest px-4 py-2 text-primary">Cível</span>
+              <span className="bg-primary/10 text-ink text-[9px] font-black uppercase tracking-widest px-4 py-2 text-primary">Família</span>
+              <span className="bg-primary/10 text-ink text-[9px] font-black uppercase tracking-widest px-4 py-2 text-primary">Imobiliário</span>
             </div>
             <div className="pt-4">
               <a
@@ -384,7 +387,96 @@ const Team = () => (
                 className="h-full w-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
               />
               <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-[10px] font-black tracking-widest text-primary uppercase">Defesa Criminal</p>
+                <p className="text-[10px] font-black tracking-widest text-primary uppercase">Direito Penal e Cível</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Profile 3 - Bruna */}
+        <div className="group grid grid-cols-1 lg:grid-cols-12 items-center gap-12">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-12 lg:grid lg:grid-cols-12 items-center gap-12"
+          >
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-5"
+            >
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border-2 border-primary/20 group">
+                <img
+                  src="/images/bruna-correia-kolbete.jpg"
+                  alt="Bruna Correia Kolbete"
+                  className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-[10px] font-black tracking-widest text-primary uppercase">Direito Civil e Penal</p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-7 flex flex-col justify-center space-y-8 mt-12 lg:mt-0"
+            >
+              <div className="relative">
+                <span className="text-[10px] font-black tracking-[0.3em] text-primary uppercase mb-2 block">Advogada Associada</span>
+                <h3 className="text-4xl md:text-5xl font-black text-ink mb-2 uppercase tracking-tighter">Bruna Correia <br /><span className="text-primary italic font-serif font-normal lowercase tracking-normal">Kolbete.</span></h3>
+                <p className="text-ink/60 font-bold tracking-widest uppercase text-[10px] mt-4">Advogada, OAB/SC 69.741</p>
+              </div>
+              <p className="text-lg text-ink/70 leading-relaxed font-light border-l-2 border-primary/20 pl-8">
+                Pós-Graduanda em <span className="font-medium text-ink border-b border-primary/30">Direito Civil/Penal e Processual Civil/Penal</span>.
+                Advogada por vocação, atua com dedicação e acolhimento na defesa dos interesses dos clientes.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="bg-ink text-white text-[9px] font-black uppercase tracking-widest px-4 py-2">Cível</span>
+                <span className="bg-primary/10 text-ink text-[9px] font-black uppercase tracking-widest px-4 py-2 text-primary">Consumidor</span>
+                <span className="bg-primary/10 text-ink text-[9px] font-black uppercase tracking-widest px-4 py-2 text-primary">Penal</span>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Profile 4 - Erica */}
+        <div className="group grid grid-cols-1 lg:grid-cols-12 items-center gap-12">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-7 flex flex-col justify-center space-y-8 order-2 lg:order-1"
+          >
+            <div className="relative">
+              <span className="text-[10px] font-black tracking-[0.3em] text-primary uppercase mb-2 block">Estagiária & Social Media</span>
+              <h3 className="text-4xl md:text-5xl font-black text-ink mb-2 uppercase tracking-tighter">Erica Roberta <br /><span className="text-primary italic font-serif font-normal lowercase tracking-normal">Melo.</span></h3>
+              <p className="text-ink/60 font-bold tracking-widest uppercase text-[10px] mt-4">Acadêmica de Direito</p>
+            </div>
+            <p className="text-lg text-ink/70 leading-relaxed font-light border-l-2 border-primary/20 pl-8">
+              Acadêmica de Direito, comunicativa e criativa. Atua como <span className="font-medium text-ink border-b border-primary/30">Estagiária e Social Media</span> do escritório, contribuindo com inovação e proximidade digital.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <span className="bg-ink text-white text-[9px] font-black uppercase tracking-widest px-4 py-2">Social Media</span>
+              <span className="bg-primary/10 text-ink text-[9px] font-black uppercase tracking-widest px-4 py-2 text-primary">Estágio Jurídico</span>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-5 order-1 lg:order-2"
+          >
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl transition-all duration-700 border-2 border-primary/20">
+              <img
+                src="/images/erica-roberta-melo.jpg"
+                alt="Erica Roberta Melo"
+                className="h-full w-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-[10px] font-black tracking-widest text-primary uppercase">Social Media & Estágio</p>
               </div>
             </div>
           </motion.div>
@@ -422,14 +514,42 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+
+    try {
+      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
+      
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          phone: formData.phone,
+          message: formData.message,
+          from_name: "Site Santos & Tavares",
+          subject: "Novo Contato do Site - Santos & Tavares Advocacia",
+        })
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({ name: '', phone: '', email: '', message: '' });
+      } else {
+        alert("Ocorreu um erro ao enviar. Por favor, tente novamente ou entre em contato diretamente via WhatsApp.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Ocorreu um erro ao enviar. Por favor, verifique sua conexão ou tente novamente.");
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-      setFormData({ name: '', phone: '', email: '', message: '' });
-    }, 1500);
+    }
   };
 
   return (
@@ -492,57 +612,80 @@ const Contact = () => {
             viewport={{ once: true }}
             className="lg:w-1/2"
           >
-            <div className="bg-bg-light/80 backdrop-blur-xl p-12 border border-primary/10 shadow-2xl relative">
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/5 -z-10"></div>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-1">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-ink/40">Nome Completo</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Seu nome"
-                      className="w-full bg-bg-light border-0 px-4 py-4 text-xs font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-ink/20"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    />
-                  </div>
-                  <div className="space-y-1">
-                    <label className="text-[10px] font-black uppercase tracking-widest text-ink/40">WhatsApp / Celular</label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="(00) 0 0000-0000"
-                      className="w-full bg-bg-light border-0 px-4 py-4 text-xs font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-ink/20"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    />
-                  </div>
+            {submitted ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="bg-bg-light/80 backdrop-blur-xl p-12 border border-primary/10 shadow-2xl relative text-center flex flex-col items-center justify-center min-h-[400px]"
+              >
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/5 -z-10"></div>
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 border border-primary/20">
+                  <Check className="w-8 h-8 text-primary" />
                 </div>
-                <div className="space-y-1">
-                  <label className="text-[10px] font-black uppercase tracking-widest text-ink/40">Assunto / Mensagem</label>
-                  <textarea
-                    required
-                    placeholder="Como podemos ajudar?"
-                    rows={4}
-                    className="w-full bg-bg-light border-0 px-4 py-4 text-xs font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none placeholder:text-ink/20"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  />
-                </div>
+                <h3 className="text-2xl font-black text-ink uppercase tracking-tight mb-2">Solicitação Enviada!</h3>
+                <p className="text-ink/60 text-sm max-w-sm mb-8 leading-relaxed font-light">
+                  Agradecemos o seu contato. Nossa equipe jurídica analisará o seu caso com total sigilo e retornará em breve.
+                </p>
                 <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full bg-ink text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-primary transition-all disabled:opacity-50 group"
+                  onClick={() => setSubmitted(false)}
+                  className="bg-ink text-white px-8 py-4 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-primary transition-all shadow-md"
                 >
-                  {loading ? 'Enviando...' : (
-                    <span className="flex items-center justify-center gap-2">
-                      Enviar Solicitação <ArrowRight className="w-4 h-4 translate-x-0 group-hover:translate-x-2 transition-transform" />
-                    </span>
-                  )}
+                  Enviar Outra Mensagem
                 </button>
-              </form>
-            </div>
+              </motion.div>
+            ) : (
+              <div className="bg-bg-light/80 backdrop-blur-xl p-12 border border-primary/10 shadow-2xl relative">
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/5 -z-10"></div>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-1">
+                      <label className="text-[10px] font-black uppercase tracking-widest text-ink/40">Nome Completo</label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="Seu nome"
+                        className="w-full bg-bg-light border-0 px-4 py-4 text-xs font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-ink/20"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <label className="text-[10px] font-black uppercase tracking-widest text-ink/40">WhatsApp / Celular</label>
+                      <input
+                        type="tel"
+                        required
+                        placeholder="(00) 0 0000-0000"
+                        className="w-full bg-bg-light border-0 px-4 py-4 text-xs font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-ink/20"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-ink/40">Assunto / Mensagem</label>
+                    <textarea
+                      required
+                      placeholder="Como podemos ajudar?"
+                      rows={4}
+                      className="w-full bg-bg-light border-0 px-4 py-4 text-xs font-bold focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none placeholder:text-ink/20"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full bg-ink text-white py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-primary transition-all disabled:opacity-50 group"
+                  >
+                    {loading ? 'Enviando...' : (
+                      <span className="flex items-center justify-center gap-2">
+                        Enviar Solicitação <ArrowRight className="w-4 h-4 translate-x-0 group-hover:translate-x-2 transition-transform" />
+                      </span>
+                    )}
+                  </button>
+                </form>
+              </div>
+            )}
           </motion.div>
         </div>
 
@@ -579,13 +722,11 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-12 gap-20 border-b border-white/5 pb-20">
         <div className="md:col-span-5">
           <div className="flex items-center gap-4 mb-10">
-            <div className="h-10 w-auto overflow-hidden border border-white/10 p-1 bg-white">
-              <img
-                src="https://imgur.com/koobVhZ.png"
-                alt="Santos & Tavares Logo"
-                className="h-full w-full object-contain"
-              />
-            </div>
+            <img
+              src="/images/logo-santos-tavares.png"
+              alt="Santos & Tavares Logo"
+              className="h-12 w-auto object-contain brightness-0 invert"
+            />
             <h2 className="font-black text-2xl tracking-tighter uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Tavares.</span></h2>
           </div>
           <p className="text-white/40 text-lg font-light leading-relaxed max-w-sm mb-10">
