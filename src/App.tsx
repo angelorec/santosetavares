@@ -12,13 +12,13 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg-light/80 backdrop-blur-xl border-b border-primary/10 h-24">
-      <div className="container mx-auto px-6 h-full flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg-light/80 backdrop-blur-xl border-b border-primary/10 py-4">
+      <div className="container mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-4 group cursor-pointer">
           <img
             src="/images/logo-santos-tavares.png"
             alt="Santos & Tavares Logo"
-            className="h-12 w-auto object-contain"
+            className="h-24 md:h-28 w-auto object-contain"
           />
           <div className="flex flex-col">
             <h2 className="font-black text-lg tracking-tighter text-ink leading-none uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Tavares.</span></h2>
@@ -63,7 +63,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-24 left-0 right-0 bg-bg-light border-b border-primary/10 shadow-xl flex flex-col p-6 space-y-6 md:hidden z-40 backdrop-blur-xl bg-bg-light/95"
+            className="absolute top-full left-0 right-0 bg-bg-light border-b border-primary/10 shadow-xl flex flex-col p-6 space-y-6 md:hidden z-40 backdrop-blur-xl bg-bg-light/95"
           >
             <a
               href="#home"
@@ -101,7 +101,7 @@ const Navbar = () => {
 };
 
 const Hero = () => (
-  <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-bg-light pt-32 lg:pt-20">
+  <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-bg-light pt-40 lg:pt-32">
     {/* Grid Background */}
     <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
       style={{ backgroundImage: 'radial-gradient(circle, var(--color-ink) 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
@@ -781,9 +781,9 @@ const Footer = () => (
             <img
               src="/images/logo-santos-tavares.png"
               alt="Santos & Tavares Logo"
-              className="h-12 w-auto object-contain brightness-0 invert"
+              className="h-24 md:h-32 w-auto object-contain brightness-0 invert"
             />
-            <h2 className="font-black text-2xl tracking-tighter uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Tavares.</span></h2>
+            <h2 className="font-black text-3xl md:text-4xl tracking-tighter uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Tavares.</span></h2>
           </div>
           <p className="text-white/40 text-lg font-light leading-relaxed max-w-sm mb-10">
             Advocacia de excelência focada em resultados estratégicos e atendimento humanizado.
