@@ -4,48 +4,104 @@ import {
   Scale, Briefcase, Users, Gavel, BookOpen, Building2,
   HeartHandshake, ShieldCheck, Car, FileText, Star,
   Phone, Mail, MapPin, ArrowRight, MessageCircle,
-  CheckCircle2, Clock, Check
+  CheckCircle2, Clock, Check, Menu, X
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-const Navbar = () => (
-  <nav className="fixed top-0 left-0 right-0 z-50 bg-bg-light/80 backdrop-blur-xl border-b border-primary/10 h-24">
-    <div className="container mx-auto px-6 h-full flex items-center justify-between">
-      <div className="flex items-center gap-4 group cursor-pointer">
-        <img
-          src="/images/logo-santos-tavares.png"
-          alt="Santos & Tavares Logo"
-          className="h-12 w-auto object-contain"
-        />
-        <div className="flex flex-col">
-          <h2 className="font-black text-lg tracking-tighter text-ink leading-none uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Tavares.</span></h2>
-          <span className="text-[8px] font-black tracking-[0.3em] text-primary uppercase mt-1">Advocacia</span>
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-bg-light/80 backdrop-blur-xl border-b border-primary/10 h-24">
+      <div className="container mx-auto px-6 h-full flex items-center justify-between">
+        <div className="flex items-center gap-4 group cursor-pointer">
+          <img
+            src="/images/logo-santos-tavares.png"
+            alt="Santos & Tavares Logo"
+            className="h-12 w-auto object-contain"
+          />
+          <div className="flex flex-col">
+            <h2 className="font-black text-lg tracking-tighter text-ink leading-none uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Tavares.</span></h2>
+            <span className="text-[8px] font-black tracking-[0.3em] text-primary uppercase mt-1">Advocacia</span>
+          </div>
         </div>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-12">
+          <a href="#home" className="text-[10px] font-black uppercase tracking-[0.2em] text-ink/40 hover:text-primary transition-all relative group">
+            Home
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#servicos" className="text-[10px] font-black uppercase tracking-[0.2em] text-ink/40 hover:text-primary transition-all relative group">
+            Serviços
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#equipe" className="text-[10px] font-black uppercase tracking-[0.2em] text-ink/40 hover:text-primary transition-all relative group">
+            Equipe
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all group-hover:w-full"></span>
+          </a>
+          <a href="#contato" className="bg-ink text-white px-8 py-3 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-primary transition-all">
+            Consulta
+          </a>
+        </div>
+
+        {/* Hamburger Icon */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden p-2 text-ink hover:text-primary transition-colors focus:outline-none"
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
 
-      <div className="hidden md:flex items-center gap-12">
-        <a href="#home" className="text-[10px] font-black uppercase tracking-[0.2em] text-ink/40 hover:text-primary transition-all relative group">
-          Home
-          <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all group-hover:w-full"></span>
-        </a>
-        <a href="#servicos" className="text-[10px] font-black uppercase tracking-[0.2em] text-ink/40 hover:text-primary transition-all relative group">
-          Serviços
-          <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all group-hover:w-full"></span>
-        </a>
-        <a href="#equipe" className="text-[10px] font-black uppercase tracking-[0.2em] text-ink/40 hover:text-primary transition-all relative group">
-          Equipe
-          <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all group-hover:w-full"></span>
-        </a>
-        <a href="#contato" className="bg-ink text-white px-8 py-3 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-primary transition-all">
-          Consulta
-        </a>
-      </div>
-    </div>
-  </nav>
-);
+      {/* Mobile Dropdown */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="absolute top-24 left-0 right-0 bg-bg-light border-b border-primary/10 shadow-xl flex flex-col p-6 space-y-6 md:hidden z-40 backdrop-blur-xl bg-bg-light/95"
+          >
+            <a
+              href="#home"
+              onClick={() => setMenuOpen(false)}
+              className="text-xs font-black uppercase tracking-[0.2em] text-ink/60 hover:text-primary transition-all py-2 border-b border-ink/5"
+            >
+              Home
+            </a>
+            <a
+              href="#servicos"
+              onClick={() => setMenuOpen(false)}
+              className="text-xs font-black uppercase tracking-[0.2em] text-ink/60 hover:text-primary transition-all py-2 border-b border-ink/5"
+            >
+              Serviços
+            </a>
+            <a
+              href="#equipe"
+              onClick={() => setMenuOpen(false)}
+              className="text-xs font-black uppercase tracking-[0.2em] text-ink/60 hover:text-primary transition-all py-2 border-b border-ink/5"
+            >
+              Equipe
+            </a>
+            <a
+              href="#contato"
+              onClick={() => setMenuOpen(false)}
+              className="bg-ink text-white text-center py-4 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-primary transition-all"
+            >
+              Consulta
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+};
 
 const Hero = () => (
-  <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-bg-light pt-20">
+  <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-bg-light pt-32 lg:pt-20">
     {/* Grid Background */}
     <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
       style={{ backgroundImage: 'radial-gradient(circle, var(--color-ink) 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
@@ -64,7 +120,7 @@ const Hero = () => (
             <span className="text-[10px] font-black tracking-[0.4em] text-primary uppercase leading-none">Santos & Tavares</span>
           </div>
 
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-ink uppercase mb-8">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-ink uppercase mb-8">
             Cada processo <br />
             <span className="text-primary italic font-serif font-normal lowercase tracking-normal">É único.</span>
           </h1>
@@ -108,9 +164,9 @@ const Hero = () => (
 );
 
 const About = () => (
-  <section id="sobre" className="pt-12 pb-32 bg-bg-light relative overflow-hidden">
+  <section id="sobre" className="py-16 md:py-32 bg-bg-light relative overflow-hidden">
     <div className="container mx-auto px-6 relative z-10">
-      <div className="flex flex-col lg:flex-row gap-24 items-center">
+      <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
         {/* Visual Fragment */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -138,7 +194,7 @@ const About = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="absolute -bottom-10 right-10 bg-ink text-white p-8 border-l-4 border-primary z-20 shadow-2xl"
+            className="hidden sm:block absolute -bottom-10 right-10 bg-ink text-white p-8 border-l-4 border-primary z-20 shadow-2xl"
           >
             <p className="text-4xl font-black tracking-tight mb-1">15+</p>
             <p className="text-[10px] font-black uppercase tracking-[0.3em] text-primary/80">Anos de Excelência</p>
@@ -158,7 +214,7 @@ const About = () => (
             <span className="text-[10px] font-black tracking-[0.4em] text-primary uppercase leading-none">O Escritório</span>
           </div>
 
-          <h2 className="text-5xl md:text-6xl font-black text-ink leading-[0.9] uppercase tracking-tighter mb-10">
+          <h2 className="text-4xl md:text-6xl font-black text-ink leading-[0.9] uppercase tracking-tighter mb-10">
             Tradição <br />
             <span className="text-primary italic font-serif font-normal lowercase tracking-normal">e Estratégia.</span>
           </h2>
@@ -204,11 +260,11 @@ const services = [
 ];
 
 const Services = () => (
-  <section id="servicos" className="py-32 bg-ink relative overflow-hidden">
+  <section id="servicos" className="py-16 md:py-32 bg-ink relative overflow-hidden">
     <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/2"></div>
 
     <div className="container mx-auto px-6 relative z-10">
-      <div className="flex flex-col lg:flex-row gap-20 items-start">
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -219,7 +275,7 @@ const Services = () => (
             <div className="h-[2px] w-12 bg-primary"></div>
             <span className="text-[10px] font-black tracking-[0.4em] text-primary uppercase">Expertise</span>
           </div>
-          <h2 className="text-5xl font-black text-white leading-tight uppercase tracking-tighter mb-8">
+          <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight uppercase tracking-tighter mb-8">
             Áreas de <br />
             <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Atuação.</span>
           </h2>
@@ -237,7 +293,7 @@ const Services = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-ink p-12 group hover:bg-primary/5 transition-colors duration-500 relative overflow-hidden"
+              className="bg-ink p-6 sm:p-12 group hover:bg-primary/5 transition-colors duration-500 relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-20 transition-opacity">
                 <service.icon size={80} strokeWidth={1} />
@@ -259,7 +315,7 @@ const Services = () => (
 );
 
 const Team = () => (
-  <section id="equipe" className="bg-bg-light py-24">
+  <section id="equipe" className="bg-bg-light py-16 md:py-24">
     <div className="mx-auto max-w-7xl px-6">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -267,13 +323,13 @@ const Team = () => (
         viewport={{ once: true }}
         className="max-w-2xl mb-16"
       >
-        <h2 className="text-4xl md:text-5xl font-black leading-tight tracking-tighter text-ink uppercase">Nossa Equipe <br /><span className="text-primary italic font-serif font-normal lowercase tracking-normal">Jurídica.</span></h2>
+        <h2 className="text-3xl md:text-5xl font-black leading-tight tracking-tighter text-ink uppercase">Nossa Equipe <br /><span className="text-primary italic font-serif font-normal lowercase tracking-normal">Jurídica.</span></h2>
         <p className="mt-6 text-lg text-ink/60 font-light leading-relaxed">
           Profissionais dedicados e comprometidos com a excelência na representação jurídica, unindo experiência e inovação para proteger seus interesses.
         </p>
       </motion.div>
 
-      <div className="grid gap-24">
+      <div className="grid gap-16 md:gap-24">
         {/* Profile 1 */}
         <div className="group grid grid-cols-1 lg:grid-cols-12 items-center gap-12">
           <motion.div
@@ -295,7 +351,7 @@ const Team = () => (
                   className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500">
                   <p className="text-[10px] font-black tracking-widest text-primary uppercase">Especialista em Direito do Trabalho</p>
                 </div>
               </div>
@@ -386,7 +442,7 @@ const Team = () => (
                 alt="Rafael dos Santos Silva"
                 className="h-full w-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500">
                 <p className="text-[10px] font-black tracking-widest text-primary uppercase">Direito Penal e Cível</p>
               </div>
             </div>
@@ -413,7 +469,7 @@ const Team = () => (
                   alt="Bruna Correia Kolbete"
                   className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500">
                   <p className="text-[10px] font-black tracking-widest text-primary uppercase">Direito Civil e Penal</p>
                 </div>
               </div>
@@ -475,7 +531,7 @@ const Team = () => (
                 alt="Erica Roberta Melo"
                 className="h-full w-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <div className="absolute inset-x-0 bottom-0 bg-ink/80 backdrop-blur-sm p-6 translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500">
                 <p className="text-[10px] font-black tracking-widest text-primary uppercase">Social Media & Estágio</p>
               </div>
             </div>
@@ -487,7 +543,7 @@ const Team = () => (
 );
 
 const Testimonials = () => (
-  <section className="bg-primary/5 py-24 overflow-hidden">
+  <section className="bg-primary/5 py-16 md:py-24 overflow-hidden">
     <div className="mx-auto max-w-7xl px-6">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -495,7 +551,7 @@ const Testimonials = () => (
         viewport={{ once: true }}
         className="mb-16 text-center"
       >
-        <h2 className="text-4xl font-bold tracking-tight font-serif text-ink">O que dizem nossos clientes</h2>
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight font-serif text-ink">O que dizem nossos clientes</h2>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -553,11 +609,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contato" className="py-32 bg-bg-light relative overflow-hidden">
+    <section id="contato" className="py-16 md:py-32 bg-bg-light relative overflow-hidden">
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-ink translate-y-full group-hover:translate-y-1/2 transition-transform opacity-[0.02]"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-20">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -568,7 +624,7 @@ const Contact = () => {
               <div className="h-[2px] w-12 bg-primary"></div>
               <span className="text-[10px] font-black tracking-[0.4em] text-primary uppercase leading-none">Contato</span>
             </div>
-            <h2 className="text-6xl font-black text-ink uppercase tracking-tighter mb-8 leading-[0.9]">
+            <h2 className="text-4xl md:text-6xl font-black text-ink uppercase tracking-tighter mb-8 leading-[0.9]">
               Inicie sua <br />
               <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Consulta.</span>
             </h2>
@@ -616,7 +672,7 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-bg-light/80 backdrop-blur-xl p-12 border border-primary/10 shadow-2xl relative text-center flex flex-col items-center justify-center min-h-[400px]"
+                className="bg-bg-light/80 backdrop-blur-xl p-6 sm:p-12 border border-primary/10 shadow-2xl relative text-center flex flex-col items-center justify-center min-h-[400px]"
               >
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/5 -z-10"></div>
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 border border-primary/20">
@@ -634,7 +690,7 @@ const Contact = () => {
                 </button>
               </motion.div>
             ) : (
-              <div className="bg-bg-light/80 backdrop-blur-xl p-12 border border-primary/10 shadow-2xl relative">
+              <div className="bg-bg-light/80 backdrop-blur-xl p-6 sm:p-12 border border-primary/10 shadow-2xl relative">
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/5 -z-10"></div>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -716,10 +772,10 @@ const Contact = () => {
 
 
 const Footer = () => (
-  <footer className="bg-ink text-white py-24 relative overflow-hidden">
+  <footer className="bg-ink text-white py-16 md:py-24 relative overflow-hidden">
     <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
     <div className="container mx-auto px-6">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-20 border-b border-white/5 pb-20">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-20 border-b border-white/5 pb-20">
         <div className="md:col-span-5">
           <div className="flex items-center gap-4 mb-10">
             <img
