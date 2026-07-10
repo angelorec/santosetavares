@@ -21,7 +21,7 @@ const Navbar = () => {
             className="h-24 md:h-28 w-auto object-contain"
           />
           <div className="flex flex-col">
-            <h2 className="font-black text-lg tracking-tighter text-ink leading-none uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Tavares.</span></h2>
+            <h2 className="font-black text-lg tracking-tighter text-ink leading-none uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">TAVARES.</span></h2>
             <span className="text-[8px] font-black tracking-[0.3em] text-primary uppercase mt-1">Advocacia</span>
           </div>
         </div>
@@ -196,7 +196,7 @@ const About = () => (
             transition={{ delay: 0.5 }}
             className="hidden sm:block absolute -bottom-10 right-10 bg-ink text-white p-8 border-l-4 border-primary z-20 shadow-2xl"
           >
-            <p className="text-4xl font-black tracking-tight mb-1">15+</p>
+            <p className="text-4xl font-black tracking-tight mb-1">7+</p>
             <p className="text-[10px] font-black uppercase tracking-[0.3em] text-primary/80">Anos de Excelência</p>
           </motion.div>
         </motion.div>
@@ -225,6 +225,9 @@ const About = () => (
             </p>
             <p>
               Nossa equipe é composta por especialistas dedicados a transformar complexidade em segurança jurídica, operando com o rigor técnico necessário para proteger seus interesses em esferas críticas.
+            </p>
+            <p className="mt-4 text-lg font-medium text-primary/80 border-t border-primary/10 pt-4">
+              Com sede em Lages e atendimento em todo o Brasil.
             </p>
           </div>
 
@@ -653,10 +656,6 @@ const Contact = () => {
                     <span>Financeiro</span>
                     <span className="text-ink/40 font-medium">(49) 99908-3360</span>
                   </p>
-                  <p className="text-sm font-bold text-ink leading-tight flex flex-col">
-                    <span>Cobranças</span>
-                    <span className="text-ink/40 font-medium">(49) 99825-1787</span>
-                  </p>
                 </div>
               </div>
             </div>
@@ -783,7 +782,7 @@ const Footer = () => (
               alt="Santos & Tavares Logo"
               className="h-24 md:h-32 w-auto object-contain brightness-0 invert"
             />
-            <h2 className="font-black text-3xl md:text-4xl tracking-tighter uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">Tavares.</span></h2>
+            <h2 className="font-black text-3xl md:text-4xl tracking-tighter uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">TAVARES.</span></h2>
           </div>
           <p className="text-white/40 text-lg font-light leading-relaxed max-w-sm mb-10">
             Advocacia de excelência focada em resultados estratégicos e atendimento humanizado.
@@ -821,10 +820,6 @@ const Footer = () => (
               <li className="flex flex-col gap-1">
                 <span className="text-[7px] font-black uppercase tracking-widest text-white/20">Financeiro</span>
                 <p className="text-sm font-bold tracking-tight">(49) 99908-3360</p>
-              </li>
-              <li className="flex flex-col gap-1">
-                <span className="text-[7px] font-black uppercase tracking-widest text-white/20">Cobranças</span>
-                <p className="text-sm font-bold tracking-tight">(49) 99825-1787</p>
               </li>
             </ul>
           </div>
