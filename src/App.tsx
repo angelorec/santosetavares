@@ -21,7 +21,7 @@ const Navbar = () => {
             className="h-24 md:h-28 w-auto object-contain"
           />
           <div className="flex flex-col">
-            <h2 className="font-black text-lg tracking-tighter text-ink leading-none uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">TAVARES.</span></h2>
+            <h2 className="font-black text-lg tracking-tighter text-ink leading-none uppercase">Santos & <span className="text-primary italic font-serif font-normal tracking-normal" style={{ textTransform: 'uppercase' }}>TAVARES.</span></h2>
             <span className="text-[8px] font-black tracking-[0.3em] text-primary uppercase mt-1">Advocacia</span>
           </div>
         </div>
@@ -782,7 +782,7 @@ const Footer = () => (
               alt="Santos & Tavares Logo"
               className="h-24 md:h-32 w-auto object-contain brightness-0 invert"
             />
-            <h2 className="font-black text-3xl md:text-4xl tracking-tighter uppercase">Santos & <span className="text-primary italic font-serif font-normal lowercase tracking-normal">TAVARES.</span></h2>
+            <h2 className="font-black text-3xl md:text-4xl tracking-tighter uppercase">Santos & <span className="text-primary italic font-serif font-normal tracking-normal" style={{ textTransform: 'uppercase' }}>TAVARES.</span></h2>
           </div>
           <p className="text-white/40 text-lg font-light leading-relaxed max-w-sm mb-10">
             Advocacia de excelência focada em resultados estratégicos e atendimento humanizado.
